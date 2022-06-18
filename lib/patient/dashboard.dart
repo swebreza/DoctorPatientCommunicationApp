@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -38,15 +40,17 @@ class Details extends StatelessWidget {
                         borderRadius: BorderRadius.circular(15.0),
                       ),
                       elevation: 10,
-                      child: Column(children: [
-                        Lottie.network(
-                          'https://assets3.lottiefiles.com/datafiles/i1uFIojbGt3KRN2/data.json',
-                          height: 120,
-                        ),
-                        const Text(
-                          "User Name",
-                        )
-                      ]),
+                      child: Column(
+                        children: [
+                          Lottie.network(
+                            'https://assets3.lottiefiles.com/datafiles/i1uFIojbGt3KRN2/data.json',
+                            height: 120,
+                          ),
+                          const Text(
+                            "Gourav Sutradhar",
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -151,6 +155,54 @@ class Details extends StatelessWidget {
                       ],
                     ),
                   ),
+                  Card(
+                    elevation: 5,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Lottie.network(
+                                'https://assets9.lottiefiles.com/packages/lf20_yubjrwy7/doctors.json',
+                                height: 120,
+                              ),
+                            ]),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Doctor Category",
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    elevation: 5,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Lottie.network(
+                                'https://assets10.lottiefiles.com/private_files/lf30_brec9S.json',
+                                height: 100,
+                              ),
+                            ]),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text(
+                              "Medicine",
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
                 padding: const EdgeInsets.all(10),
                 shrinkWrap: true,
@@ -159,7 +211,37 @@ class Details extends StatelessWidget {
           ),
           Card(
             elevation: 20,
-            child: Container(height: 75, width: 300, child: Text("data")),
+            child: Container(
+                padding: EdgeInsets.all(20),
+                height: 95,
+                width: 300,
+                child: Row(children: [
+                  Column(
+                    children: [
+                      Lottie.network(
+                        'https://assets6.lottiefiles.com/packages/lf20_l13zwx3i.json',
+                        height: 50,
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "Dr. Raja",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 20),
+                      ),
+                      Text(
+                        "MBBS ,MD",
+                        style: TextStyle(fontWeight: FontWeight.w400),
+                      ),
+                      Text(
+                        "Bangalore",
+                        style: TextStyle(fontWeight: FontWeight.w300),
+                      ),
+                    ],
+                  )
+                ])),
           )
         ],
       ),
