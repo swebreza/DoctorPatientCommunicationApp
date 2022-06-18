@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+// import './';
 
 //Doctor
 class DDashboard extends StatelessWidget {
@@ -25,39 +26,47 @@ class Details extends StatelessWidget {
       child: Column(
         // mainAxisAlignment: MainAxisAlignment.,
         children: [
-          Card(
-            elevation: 20,
-            child: Container(
-                padding: EdgeInsets.all(20),
-                height: 95,
-                width: 300,
-                child: Row(children: [
-                  Column(
-                    children: [
-                      Lottie.network(
-                        'https://assets6.lottiefiles.com/packages/lf20_l13zwx3i.json',
-                        height: 55,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "Dr. Raja",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        "MBBS ,MD",
-                        style: TextStyle(fontWeight: FontWeight.w400),
-                      ),
-                      Text(
-                        "Bangalore",
-                        style: TextStyle(fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  )
-                ])),
+          InkWell(
+            onTap: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => DDashboard()),
+              // );
+            },
+            child: Card(
+              elevation: 20,
+              child: Container(
+                  padding: EdgeInsets.all(20),
+                  height: 95,
+                  width: 300,
+                  child: Row(children: [
+                    Column(
+                      children: [
+                        Lottie.network(
+                          'https://assets6.lottiefiles.com/packages/lf20_l13zwx3i.json',
+                          height: 55,
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "Dr. Raja",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 20),
+                        ),
+                        Text(
+                          "MBBS ,MD",
+                          style: TextStyle(fontWeight: FontWeight.w400),
+                        ),
+                        Text(
+                          "Bangalore",
+                          style: TextStyle(fontWeight: FontWeight.w300),
+                        ),
+                      ],
+                    )
+                  ])),
+            ),
           ),
           Container(
             child: Column(children: [

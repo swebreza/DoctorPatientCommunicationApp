@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import './status.dart';
+import './report.dart';
 
 //Patinet
 class Dashboard extends StatelessWidget {
@@ -63,52 +65,68 @@ class Details extends StatelessWidget {
                     mainAxisExtent: 150),
                 // ignore: sort_child_properties_last
                 children: [
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Status()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets8.lottiefiles.com/private_files/lf30_c7jf0nhv.json',
+                                  height: 120,
+                                  // width: 50,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              Lottie.network(
-                                'https://assets8.lottiefiles.com/private_files/lf30_c7jf0nhv.json',
-                                height: 120,
-                                // width: 50,
-                              ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            const Text("Status"),
-                          ],
-                        ),
-                      ],
+                              const Text("Status"),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Reports()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets7.lottiefiles.com/private_files/lf30_bvfgrs5r.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Lottie.network(
-                                'https://assets7.lottiefiles.com/private_files/lf30_bvfgrs5r.json',
-                                height: 120,
+                              const Text(
+                                "Report",
                               ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Report",
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Card(
