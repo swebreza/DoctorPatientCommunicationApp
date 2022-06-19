@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-// import './';
+import './doctorCategory.dart';
+import './timeline.dart';
+import './pes-med.dart';
 
 //Doctor
 class DDashboard extends StatelessWidget {
@@ -78,96 +80,130 @@ class Details extends StatelessWidget {
                     mainAxisExtent: 150),
                 // ignore: sort_child_properties_last
                 children: [
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DoctorCategory()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets6.lottiefiles.com/packages/lf20_vPnn3K.json',
+                                  height: 120,
+                                  // width: 50,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            // ignore: prefer_const_literals_to_create_immutables
                             children: [
-                              Lottie.network(
-                                'https://assets6.lottiefiles.com/packages/lf20_vPnn3K.json',
-                                height: 120,
-                                // width: 50,
-                              ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          // ignore: prefer_const_literals_to_create_immutables
-                          children: [
-                            const Text("Patient List"),
-                          ],
-                        ),
-                      ],
+                              const Text("Patient List"),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Timeline()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets8.lottiefiles.com/private_files/lf30_qkroghd7.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Lottie.network(
-                                'https://assets8.lottiefiles.com/private_files/lf30_qkroghd7.json',
-                                height: 120,
+                              const Text(
+                                "Appointment ",
                               ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Appointment ",
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Med()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets1.lottiefiles.com/packages/lf20_zlwrueb3.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Lottie.network(
-                                'https://assets6.lottiefiles.com/packages/lf20_udklubzk.json',
-                                height: 120,
-                              ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [const Text("Exercise")],
-                        ),
-                      ],
+                            children: [const Text("Prescribed Medicine")],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DoctorCategory()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets9.lottiefiles.com/packages/lf20_3xgahwks.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Lottie.network(
-                                'https://assets2.lottiefiles.com/packages/lf20_yhuuwsyf.json',
-                                height: 120,
+                              const Text(
+                                "Patient Recovery Rate",
                               ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "ECG Data",
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],

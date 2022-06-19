@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-class DoctorCategory extends StatelessWidget {
-  const DoctorCategory({Key? key}) : super(key: key);
+class Med extends StatelessWidget {
+  const Med({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Doctor Category"),
+        title: const Text("Medicine"),
       ),
       body: const Details(),
     );
@@ -27,7 +27,7 @@ class Details extends StatelessWidget {
             Column(
               children: [
                 Lottie.network(
-                  'https://assets2.lottiefiles.com/packages/lf20_otmfyizb.json',
+                  'https://assets1.lottiefiles.com/packages/lf20_pk5mpw6j.json',
                   height: 300,
                 ),
               ],
@@ -46,26 +46,18 @@ class Details extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                Lottie.network(
-                                  'https://assets3.lottiefiles.com/datafiles/i1uFIojbGt3KRN2/data.json',
-                                  height: 50,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
                                 Text(
-                                  "Gaurav Sutradhar",
+                                  "DOLO 350",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 ),
                                 Text(
-                                  "Problem:- Diarrha",
+                                  "50mg",
                                   style: TextStyle(fontWeight: FontWeight.w400),
                                 ),
                                 Text(
-                                  "Bangalore",
+                                  "once a day",
                                   style: TextStyle(fontWeight: FontWeight.w300),
                                 ),
                               ],
@@ -77,64 +69,32 @@ class Details extends StatelessWidget {
                     Card(
                       elevation: 10,
                       child: Container(
-                          padding: const EdgeInsets.all(20),
-                          height: 95,
-                          width: 300,
-                          child: Row(children: [
-                            Column(
-                              children: [
-                                Lottie.network(
-                                  'https://assets3.lottiefiles.com/datafiles/i1uFIojbGt3KRN2/data.json',
-                                  height: 50,
-                                ),
-                              ],
-                            ),
+                        padding: const EdgeInsets.all(20),
+                        height: 95,
+                        width: 300,
+                        child: Row(
+                          children: [
                             Column(
                               children: [
                                 Text(
-                                  "Dr.Nandi",
+                                  "DOLO 360",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 ),
                                 Text(
-                                  "MBBS MD",
+                                  "60mg",
                                   style: TextStyle(fontWeight: FontWeight.w400),
+                                ),
+                                Text(
+                                  "once a day",
+                                  style: TextStyle(fontWeight: FontWeight.w300),
                                 ),
                               ],
                             )
-                          ])),
-                    ),
-                    Card(
-                      elevation: 10,
-                      child: Container(
-                          padding: const EdgeInsets.all(20),
-                          height: 95,
-                          width: 300,
-                          child: Row(children: [
-                            Column(
-                              children: [
-                                Lottie.network(
-                                  'https://assets3.lottiefiles.com/datafiles/i1uFIojbGt3KRN2/data.json',
-                                  height: 50,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
-                                Text(
-                                  "Dr.Binod",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20),
-                                ),
-                                Text(
-                                  "MBBS MD",
-                                  style: TextStyle(fontWeight: FontWeight.w400),
-                                ),
-                              ],
-                            )
-                          ])),
+                          ],
+                        ),
+                      ),
                     ),
                     Card(
                       elevation: 10,
@@ -146,26 +106,52 @@ class Details extends StatelessWidget {
                           children: [
                             Column(
                               children: [
-                                Lottie.network(
-                                  'https://assets3.lottiefiles.com/datafiles/i1uFIojbGt3KRN2/data.json',
-                                  height: 50,
-                                ),
-                              ],
-                            ),
-                            Column(
-                              children: [
                                 Text(
-                                  "Dr.Dhar",
+                                  "DOLO 370",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 ),
                                 Text(
-                                  "MBBS MD",
+                                  "70mg",
                                   style: TextStyle(fontWeight: FontWeight.w400),
                                 ),
+                                Text(
+                                  "once a day",
+                                  style: TextStyle(fontWeight: FontWeight.w300),
+                                ),
                               ],
-                            ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Card(
+                      elevation: 10,
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        height: 95,
+                        width: 300,
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text(
+                                  "DOLO 380",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20),
+                                ),
+                                Text(
+                                  "80mg",
+                                  style: TextStyle(fontWeight: FontWeight.w400),
+                                ),
+                                Text(
+                                  "once a day",
+                                  style: TextStyle(fontWeight: FontWeight.w300),
+                                ),
+                              ],
+                            )
                           ],
                         ),
                       ),

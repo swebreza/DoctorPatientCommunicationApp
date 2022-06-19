@@ -7,6 +7,7 @@ import './report.dart';
 import './exercise.dart';
 import './ecg.dart';
 import './doctorCategory.dart';
+import './med.dart';
 
 //Patinet
 class Dashboard extends StatelessWidget {
@@ -225,28 +226,36 @@ class Details extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Med()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets10.lottiefiles.com/private_files/lf30_brec9S.json',
+                                  height: 100,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Lottie.network(
-                                'https://assets10.lottiefiles.com/private_files/lf30_brec9S.json',
-                                height: 100,
+                              const Text(
+                                "Medicine",
                               ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Medicine",
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],

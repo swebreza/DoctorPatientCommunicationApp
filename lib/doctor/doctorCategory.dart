@@ -8,7 +8,7 @@ class DoctorCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Doctor Category"),
+        title: const Text("Patient List"),
       ),
       body: const Details(),
     );
@@ -27,7 +27,7 @@ class Details extends StatelessWidget {
             Column(
               children: [
                 Lottie.network(
-                  'https://assets2.lottiefiles.com/packages/lf20_otmfyizb.json',
+                  'https://assets2.lottiefiles.com/packages/lf20_o7ibak4d.json',
                   height: 300,
                 ),
               ],
@@ -92,13 +92,17 @@ class Details extends StatelessWidget {
                             Column(
                               children: [
                                 Text(
-                                  "Dr.Nandi",
+                                  "Nand Raz",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 ),
                                 Text(
-                                  "MBBS MD",
+                                  "Problem:- Taifoid",
+                                  style: TextStyle(fontWeight: FontWeight.w400),
+                                ),
+                                Text(
+                                  "Bangalore",
                                   style: TextStyle(fontWeight: FontWeight.w400),
                                 ),
                               ],
@@ -123,10 +127,14 @@ class Details extends StatelessWidget {
                             Column(
                               children: [
                                 Text(
-                                  "Dr.Binod",
+                                  "Binodam",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
+                                ),
+                                Text(
+                                  "Problem:- Migrain",
+                                  style: TextStyle(fontWeight: FontWeight.w400),
                                 ),
                                 Text(
                                   "MBBS MD",
@@ -155,13 +163,13 @@ class Details extends StatelessWidget {
                             Column(
                               children: [
                                 Text(
-                                  "Dr.Dhar",
+                                  "Dharm",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 ),
                                 Text(
-                                  "MBBS MD",
+                                  "Headache",
                                   style: TextStyle(fontWeight: FontWeight.w400),
                                 ),
                               ],
