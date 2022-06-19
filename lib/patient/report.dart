@@ -82,6 +82,17 @@ class Details extends StatelessWidget {
             ],
           ),
         ),
+        ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              primary: Colors.red,
+            ),
+            onPressed: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => DDashboard()),
+              // );
+            },
+            child: const Text("Download")),
       ],
     );
   }

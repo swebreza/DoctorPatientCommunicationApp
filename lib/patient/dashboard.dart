@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import './status.dart';
 import './report.dart';
+import './exercise.dart';
+import './ecg.dart';
+import './doctorCategory.dart';
 
 //Patinet
 class Dashboard extends StatelessWidget {
@@ -129,72 +132,97 @@ class Details extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Exercise()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets6.lottiefiles.com/packages/lf20_udklubzk.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Lottie.network(
-                                'https://assets6.lottiefiles.com/packages/lf20_udklubzk.json',
-                                height: 120,
-                              ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [const Text("Exercise")],
-                        ),
-                      ],
+                            children: [const Text("Exercise")],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ECG()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets9.lottiefiles.com/packages/lf20_lqeasim2.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Lottie.network(
-                                'https://assets2.lottiefiles.com/packages/lf20_yhuuwsyf.json',
-                                height: 120,
+                              const Text(
+                                "ECG Data",
                               ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "ECG Data",
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                  Card(
-                    elevation: 5,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Row(
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => DoctorCategory()),
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Lottie.network(
+                                  'https://assets9.lottiefiles.com/packages/lf20_yubjrwy7/doctors.json',
+                                  height: 120,
+                                ),
+                              ]),
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Lottie.network(
-                                'https://assets9.lottiefiles.com/packages/lf20_yubjrwy7/doctors.json',
-                                height: 120,
+                              const Text(
+                                "Doctor Category",
                               ),
-                            ]),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Doctor Category",
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   Card(
@@ -227,40 +255,6 @@ class Details extends StatelessWidget {
               )
             ]),
           ),
-          Card(
-            elevation: 20,
-            child: Container(
-                padding: EdgeInsets.all(20),
-                height: 95,
-                width: 300,
-                child: Row(children: [
-                  Column(
-                    children: [
-                      Lottie.network(
-                        'https://assets6.lottiefiles.com/packages/lf20_l13zwx3i.json',
-                        height: 50,
-                      ),
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "Dr. Raja",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 20),
-                      ),
-                      Text(
-                        "MBBS ,MD",
-                        style: TextStyle(fontWeight: FontWeight.w400),
-                      ),
-                      Text(
-                        "Bangalore",
-                        style: TextStyle(fontWeight: FontWeight.w300),
-                      ),
-                    ],
-                  )
-                ])),
-          )
         ],
       ),
     );
