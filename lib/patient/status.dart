@@ -92,7 +92,7 @@ class Details extends StatelessWidget {
                         Column(
                           children: [
                             Text(
-                              "Blood Text",
+                              "Blood Test",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 20),
                             ),

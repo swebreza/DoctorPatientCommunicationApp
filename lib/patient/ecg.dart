@@ -70,7 +70,10 @@ class Details extends StatelessWidget {
               ),
             ],
           ),
-          Text("ECG"),
+          Text(
+            "ECG",
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
+          ),
         ],
       ),
     );
